@@ -9,13 +9,15 @@ const fromUnitSelect = document.getElementById('fromUnit');
 const toUnitSelect = document.getElementById('toUnit');
 const output = document.getElementById('output');
 form.addEventListener('submit', function(e) {
-    e.preventDefault(); // Impedir o envio do formulário
+    e.preventDefault();
     convert();
 });
 categorySelect.addEventListener('change', updateUnits);
 fromUnitSelect.addEventListener('change', updateUnits);
 function updateUnits() {
     const category = categorySelect.value;
+
+    // Limpar as opções atuais
     fromUnitSelect.innerHTML = '';
     toUnitSelect.innerHTML = '';
     units[category].forEach(function(unit) {
@@ -43,6 +45,7 @@ function convert() {
             result = convertTemperatura(value, fromUnit, toUnit);
             break;
     }
+
     output.textContent = result;
 }
 function convertComprimento(value, fromUnit, toUnit) {
