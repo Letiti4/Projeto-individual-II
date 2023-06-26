@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(113, 10, 209);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 110px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 250px;
+}
+
+select {
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 2px 10px;
+}
+
+#output {
+    margin-top: 10px;
+    font-weight: bold;
+}
